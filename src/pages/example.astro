@@ -1,0 +1,16 @@
+---
+import { actions } from 'astro:actions';
+
+export const prerender = false
+
+const result = Astro.getActionResult(actions.example)
+console.log(result)
+---
+
+<html>
+	<main>
+    <form method="POST" action={actions.example}>
+      <button>Run actions</button>
+    </form>
+	</main>
+</html>
